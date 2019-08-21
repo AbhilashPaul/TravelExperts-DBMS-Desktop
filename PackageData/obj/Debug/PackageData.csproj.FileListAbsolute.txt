@@ -1,0 +1,6 @@
+C:\Users\826747\source\repos\TravelExperts_PackageManager\PackageData\bin\Debug\PackageData.dll
+C:\Users\826747\source\repos\TravelExperts_PackageManager\PackageData\bin\Debug\PackageData.pdb
+C:\Users\826747\source\repos\TravelExperts_PackageManager\PackageData\obj\Debug\PackageData.csprojAssemblyReference.cache
+C:\Users\826747\source\repos\TravelExperts_PackageManager\PackageData\obj\Debug\PackageData.csproj.CoreCompileInputs.cache
+C:\Users\826747\source\repos\TravelExperts_PackageManager\PackageData\obj\Debug\PackageData.dll
+C:\Users\826747\source\repos\TravelExperts_PackageManager\PackageData\obj\Debug\PackageData.pdb

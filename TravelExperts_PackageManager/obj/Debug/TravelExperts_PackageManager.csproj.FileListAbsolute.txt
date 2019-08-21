@@ -1,0 +1,13 @@
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.csprojAssemblyReference.cache
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.frmMain.resources
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.Properties.Resources.resources
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.csproj.GenerateResource.cache
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.csproj.CoreCompileInputs.cache
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\bin\Debug\TravelExperts_PackageManager.exe.config
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\bin\Debug\TravelExperts_PackageManager.exe
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\bin\Debug\TravelExperts_PackageManager.pdb
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\bin\Debug\PackageData.dll
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\bin\Debug\PackageData.pdb
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.csproj.CopyComplete
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.exe
+C:\Users\826747\source\repos\TravelExperts_PackageManager\TravelExperts_PackageManager\obj\Debug\TravelExperts_PackageManager.pdb
