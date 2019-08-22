@@ -10,7 +10,19 @@ namespace PackageData
     {
         public Supplier() { }
 
-        public int SupplierID { get; set; }
-        public string SupplierName { get; set; }
+        public int SupplierId { get; set; }  
+        public string SupName { get; set; }  
+
+        /// <summary>
+        /// creates a copy of the supplier object
+        /// </summary>
+        /// <returns>a suppier object</returns>
+        public Supplier CopySupplier()
+        {
+            Supplier copy = new Supplier();
+            copy.SupplierId = SupplierId; ;
+            copy.SupName = SupName;
+            return copy;
+        }
     }
 }

@@ -10,7 +10,19 @@ namespace PackageData
     {
         public Product() { }
 
-        public int ProductID { get; set; }
-        public string ProductName { get; set; }
+        public int ProductId { get; set; }    
+        public string ProdName { get; set; }             
+
+        /// <summary>
+        /// creates a copy of the product object
+        /// </summary>
+        /// <returns>a product object</returns>
+        public Product CopyProduct()
+        {
+            Product copy = new Product();
+            copy.ProductId = ProductId; ; 
+            copy.ProdName = ProdName;
+            return copy;
+        }
     }
 }

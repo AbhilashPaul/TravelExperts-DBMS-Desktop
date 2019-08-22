@@ -27,6 +27,7 @@ namespace TravelExperts_PackageManager
         public frmMain()
         {
             InitializeComponent();
+            maximizeTheWindow();                        //open application in full screen mode
         }
 
         //List to hold all the packages
@@ -51,8 +52,10 @@ namespace TravelExperts_PackageManager
             try
             {
                 int index = cboPackages.SelectedIndex;                      //get the the user selection
-                Package pkg = packages[index];                              //ge the package details
+                Package pkg = packages[index];                              //get the package details
+                DataTable products_suppliers = PackageDB.GetProductsAndSuppliers(pkg.PackageID); // get the products and suppliers
                 this.DisplayPackage(pkg);                                   //display package details
+                packageDGV.DataSource = products_suppliers;
             }
             catch (Exception ex)
             {
@@ -99,6 +102,30 @@ namespace TravelExperts_PackageManager
         {
             this.Close();
         }
-        
+        /// <summary>
+        /// Opens the application in full size
+        /// </summary>
+        /// Author: Paul
+        private void maximizeTheWindow()
+        {
+            FormBorderStyle = FormBorderStyle.None;                             //set form border style to 'none'
+            WindowState = FormWindowState.Maximized;                            //set window state to maximized
+            StartPosition = FormStartPosition.CenterScreen;                     //set the form start position to the centre of the screen
+        }
+
+        /// <summary>
+        /// escapes full screen mode when user press 'esc' key when form is selected
+        /// </summary>
+        /// Author: Paul
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (Form.ModifierKeys == Keys.None && keyData == Keys.Escape)
+            {
+                FormBorderStyle = FormBorderStyle.Sizable;                                          //set the form border style to sizable
+                WindowState = FormWindowState.Normal;
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
     }
 }

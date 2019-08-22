@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,7 @@ namespace PackageData
             Package pkg = null;
 
             //initialize db connection. 
-            //Environment.MachineName provides name of teh machien the application running on. 
+            //Environment.MachineName provides name of the machine this application running on. 
             //Works only if the database is installed on the same machine
             using (SqlConnection connection = TravelExpertsDB.GetConnection(Environment.MachineName))
             {
@@ -104,6 +105,39 @@ namespace PackageData
                 }
             }
             return pkg;             //return list of package objects
+        }
+
+        /// <summary>
+        /// Function to retrieve products included in the user selected package 
+        /// </summary>
+        /// <param name="packageID">Package id</param>
+        /// <returns>list of products as an array list</returns>
+        public static DataTable GetProductsAndSuppliers(int packageID)
+        {
+            //Array list to product names
+            DataTable dt = new DataTable();
+            //initialize db connection. 
+            //Environment.MachineName provides name of teh machien the application running on. 
+            //Works only if the database is installed on the same machine
+            using (SqlConnection connection = TravelExpertsDB.GetConnection(Environment.MachineName))
+            {
+                //define select query
+                string selectQuery = "SELECT p.ProdName as Product, s.SupName as Supplier FROM Packages_Products_Suppliers as pps " +
+                                        "inner join Products_Suppliers as ps " +
+                                        "on pps.ProductSupplierId = ps.ProductSupplierId " +
+                                        "inner join Products as p on ps.ProductId = p.ProductId " +
+                                        "inner join Suppliers as s on ps.SupplierId = s.SupplierId " +
+                                        "where PackageId = @PackageId";
+                using (SqlCommand cmd = new SqlCommand(selectQuery, connection))                        //initialize sqlcommand
+                {
+                    cmd.Parameters.AddWithValue("@PackageId", packageID);                               //data bind package id                                              
+                    connection.Open();                                                                  //open DB connection
+                    cmd.ExecuteNonQuery();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+            }
+            return dt;  //return list of products
         }
 
     }
