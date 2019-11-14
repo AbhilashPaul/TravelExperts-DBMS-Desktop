@@ -1,0 +1,10 @@
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\bin\Debug\PackageData.dll
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\bin\Debug\PackageData.pdb
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\bin\Debug\Models.dll
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\bin\Debug\Models.pdb
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\obj\Debug\DAL.csproj.CopyComplete
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\obj\Debug\PackageData.dll
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\obj\Debug\PackageData.pdb
+F:\TravelExperts-PackageManager-DesktopApp\PackageData\bin\Debug\MaterialSkin.dll

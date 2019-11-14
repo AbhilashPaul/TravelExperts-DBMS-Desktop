@@ -12,7 +12,7 @@ using System.Threading.Tasks;
  * Date:  16th July 2019 
  */
  
-namespace PackageData
+namespace DataAccessLayer
 {
     public static class TravelExpertsDB
     {
@@ -23,7 +23,7 @@ namespace PackageData
         /// <returns> returns the connection</returns>
         public static SqlConnection GetConnection(string MachineName)       //works only if the application and server is in the same machine
         {
-            string connectionString = "Data Source=" + MachineName + @"\SQLEXPRESS;Initial Catalog=TravelExperts;Integrated Security=True";
+            string connectionString = "Data Source=" + MachineName + @";Initial Catalog=TravelExperts;Integrated Security=True";
             SqlConnection con = new SqlConnection(connectionString);
             return con;
         }

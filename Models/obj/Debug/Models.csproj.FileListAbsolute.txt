@@ -1,0 +1,6 @@
+F:\TravelExperts-PackageManager-DesktopApp\Models\bin\Debug\Models.dll
+F:\TravelExperts-PackageManager-DesktopApp\Models\bin\Debug\Models.pdb
+F:\TravelExperts-PackageManager-DesktopApp\Models\obj\Debug\Models.csprojAssemblyReference.cache
+F:\TravelExperts-PackageManager-DesktopApp\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+F:\TravelExperts-PackageManager-DesktopApp\Models\obj\Debug\Models.dll
+F:\TravelExperts-PackageManager-DesktopApp\Models\obj\Debug\Models.pdb

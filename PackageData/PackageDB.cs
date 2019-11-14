@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Models;
 
 /*
  * This is the data access class for travel package entity.
@@ -14,7 +15,7 @@ using System.Threading.Tasks;
  * Date:  26th July 2019 
  */
 
-namespace PackageData
+namespace DataAccessLayer
 {
     public static class PackageDB
     {
@@ -106,6 +107,95 @@ namespace PackageData
             }
             return pkg;             //return list of package objects
         }
+
+
+
+        /// <summary>
+        /// Function to retrieve products included in the user selected package 
+        /// </summary>
+        /// <param name="packageID">Package id</param>
+        /// <returns>list of products as an array list</returns>
+        public static List<Product> GetProducts(int packageID)
+        {
+            //List to store products
+            List<Product> products = new List<Product>();
+
+            Product product = null;
+            
+            //initialize db connection. 
+            //Environment.MachineName provides name of the machien the application running on. 
+            //Works only if the database is installed on the same machine
+            using (SqlConnection connection = TravelExpertsDB.GetConnection(Environment.MachineName))
+            {
+                //define select query
+                string selectQuery = "SELECT p.ProdName, p.ProductId FROM Packages_Products_Suppliers as pps " +
+                                        "inner join Products_Suppliers as ps " +
+                                        "on pps.ProductSupplierId = ps.ProductSupplierId " +
+                                        "inner join Products as p on ps.ProductId = p.ProductId " +
+                                        "where PackageId = @PackageId";
+                using (SqlCommand cmd = new SqlCommand(selectQuery, connection))                        //initialize sqlcommand
+                {
+                    cmd.Parameters.AddWithValue("@PackageId", packageID);                               //data bind package id                                              
+                    connection.Open();                                                                  //open DB connection
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())                          //initialize reader
+                    {
+                        while (reader.Read())                                                      //if there is data to be read, create product objects and add them to list
+                        {
+                            product = new Product();                                                
+                            product.ProductId = (int)reader["ProductId"];                           
+                            product.ProdName = reader["ProdName"].ToString();
+                            products.Add(product);
+                        }
+                    }
+                    
+                }
+            }
+            return products;  //return list of products
+        }
+
+        /// <summary>
+        /// Function to retrieve suppliers included in the user selected package 
+        /// </summary>
+        /// <param name="packageID">Package id</param>
+        /// <returns>list of suppliers as an array list</returns>
+        public static List<Supplier> GetSuppliers(int packageID)
+        {
+            //List to store suppliers
+            List<Supplier> suppliers = new List<Supplier>();
+            Supplier supplier = null;
+
+            //initialize db connection. 
+            //Environment.MachineName provides name of the machien the application running on. 
+            //Works only if the database is installed on the same machine
+            using (SqlConnection connection = TravelExpertsDB.GetConnection(Environment.MachineName))
+            {
+                //define select query
+                string selectQuery = "SELECT s.SupplierId, s.SupName FROM Packages_Products_Suppliers as pps " +
+                                        "inner join Products_Suppliers as ps " +
+                                        "on pps.ProductSupplierId = ps.ProductSupplierId " +
+                                        "inner join Suppliers as s on ps.SupplierId = s.SupplierId " +
+                                        "where PackageId = @PackageId";
+                using (SqlCommand cmd = new SqlCommand(selectQuery, connection))                        //initialize sqlcommand
+                {
+                    cmd.Parameters.AddWithValue("@PackageId", packageID);                               //data bind package id                                              
+                    connection.Open();                                                                  //open DB connection
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())                         
+                    {
+                        while (reader.Read())                                                      //if there is data to be read, create supplier objects and add them to list
+                        {
+                            supplier = new Supplier();                                            
+                            supplier.SupplierId = (int)reader["SupplierId"];
+                            supplier.SupName = reader["SupName"].ToString();
+                            suppliers.Add(supplier);
+                        }
+                    }
+                }
+            }
+            return suppliers;  //return list of suppliers
+        }
+
 
         /// <summary>
         /// Function to retrieve products included in the user selected package 

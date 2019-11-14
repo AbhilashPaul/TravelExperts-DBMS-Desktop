@@ -1,0 +1,15 @@
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\bin\Debug\TravelExperts_DBManager.exe.config
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\bin\Debug\TravelExperts_DBManager.exe
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\bin\Debug\TravelExperts_DBManager.pdb
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.csprojAssemblyReference.cache
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\MainWindow.g.cs
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\App.g.cs
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager_MarkupCompile.cache
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager_MarkupCompile.lref
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\MainWindow.baml
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.g.resources
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.Properties.Resources.resources
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.csproj.GenerateResource.cache
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.csproj.CoreCompileInputs.cache
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.exe
+F:\TravelExperts-PackageManager-DesktopApp\TravelExperts_DBManager\obj\Debug\TravelExperts_DBManager.pdb
